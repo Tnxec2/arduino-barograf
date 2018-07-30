@@ -519,8 +519,8 @@ void zeigeMinMax(long pressure) {
  */
 float readRaw() {
 	float Vbat = (analogRead(pinBat) * 1.1) / 1023;
-  float del = 0.0925; // R2/(R1+R2)  0.99кОм / (9.88кОм + 0.99кОм)
-   del = 0.0930; // R2/(R1+R2)  0.99кОм / (9.88кОм + 0.99кОм)
-  float Vin = Vbat / del;
+	//float del = 0.0925; // R2/(R1+R2)  0.99кОм / (9.88кОм + 0.99кОм)
+	float del = 0.0930; // R2/(R1+R2)  0.99кОм / (9.88кОм + 0.99кОм)
+	float Vin = Vbat / del;
 	return Vin;
 }
